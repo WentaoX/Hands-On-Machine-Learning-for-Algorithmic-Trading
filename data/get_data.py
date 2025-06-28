@@ -23,7 +23,7 @@ def get_wiki_prices():
         store.put('quandl/wiki/prices', df)
 
 
-def get_wiki_constitutents():
+def get_wiki_constituents():
     """source: https://www.quandl.com/api/v3/databases/WIKI/codes?api_key=<API_KEY>
         Download and rename to wiki_stocks.csv
     """
@@ -33,7 +33,7 @@ def get_wiki_constitutents():
     df.columns = ['symbol', 'name']
     print(df.info(null_counts=True))
     with pd.HDFStore('assets.h5') as store:
-        store.put('quandl/wiki/prices', df)
+        store.put('quandl/wiki/stocks', df)
 
 
 def get_sp500_prices():
