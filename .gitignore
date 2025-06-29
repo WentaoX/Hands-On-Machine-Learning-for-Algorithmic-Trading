@@ -1,2 +1,6 @@
 *.bin
 *.gz
+.DS_Store
+*.tmp
+*.h5
+*.ipynb_checkpoints
